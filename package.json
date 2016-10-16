@@ -1,0 +1,23 @@
+{
+  "name": "bredemo",
+  "version": "1.0.0",
+  "description": "bredemo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murtato/BREdemo.git"
+  },
+  "author": "vtran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murtato/BREdemo/issues"
+  },
+  "homepage": "https://github.com/murtato/BREdemo#readme",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0"
+  }
+}
