@@ -6,8 +6,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var Materialize = require('node-materialize');
-
+var mongoose = require('mongoose');
 // var routes = require('./routes/index');
+// var users = require('./routes/users');
+
 // Create our express app
 var app = express();
 
@@ -32,6 +34,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.get('/', function(req, res) {
   res.render('home');
 });
+// app.get('/about', function(req, res) {
+//   res.render('about');
+// });
 app.get('/goodbye', function(req, res) {
   res.json( {msg: 'Goodbye World'} );
 });
