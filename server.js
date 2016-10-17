@@ -5,14 +5,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var Materialize = require('node-materialize');
 
 // var routes = require('./routes/index');
 // Create our express app
 var app = express();
 
 // configure the app (app.set)
-app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 app.locals.title = 'Lease BREaker';
 
 // mount middleware (app.use)
