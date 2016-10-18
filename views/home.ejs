@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app='BredemoApp'>
 <head>
-  <$- include('./partials/head') $>
+  <ng-include src="./partials/head.ejs"></ng-include>
     <meta charset="UTF-8">
     <title><%= title %></title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="/javascripts/scripts.js"></script>
+    <script src="/controllers/bredemoController.js"></script>
 </head>
 <body>
-  <$- include('./partials/navbar') $>
+  <!-- <ng-include src="./partials/navbar.ejs"></ng-include> -->
   <h1>BRE Investments</h1>
-  <div class="nav-wrapper">
-  <a href="#" class="brand-logo">Lease BREaker</a>
-  </div>
+  <!-- <div class="nav-wrapper"> -->
+  <a href="#" class="brand-logo">BRE Investments</a>
+  <!-- </div> -->
   <h1>About Our Service</h1>
-  <p>Looking to sell some real estate? Enter BRE Investments.</p>
+  <p>Selling some real estate? BRE Investments is here to help you.</p>
   <p>Try out our (experimental) instant Real Estate Value Estimator to find out how much you can earn from the sale of your property.</p>
+    Start by entering the cost of your rent here:
+  <div ng-controller="bredemoController as breCalculator">
+    {{(report.rent * 12 * .65 / .04)*1.1| currency}}
+  </div>
+    <div ng-app="">
+      <p>Name: <input type="text" ng-model="name"></p>
+      <p ng-bind="name"></p>
+    </div>
+  </div>
 </body>
 </html>

@@ -8,6 +8,7 @@ var bodyParser      = require('body-parser');
 var Materialize     = require('node-materialize');
 var mongoose        = require('mongoose');
 var session         = require('express-session');
+
 // var routes = require('./routes/index');
 // var users = require('./routes/users');
 
@@ -17,7 +18,7 @@ var app = express();
 // configure the app (app.set)
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.locals.title = 'Lease BREaker';
+app.locals.title = 'BRE Calculator';
 
 // mount middleware (app.use)
 app.use(function(req, res, next) {
@@ -42,7 +43,7 @@ app.get('/goodbye', function(req, res) {
   res.json( {msg: 'Goodbye World'} );
 });
 app.get('/todos', function(req, res) {
-  app.locals.title = 'Lease BREaker';
+  app.locals.title = 'BRE Calculator';
   app.locals.todos = [
     {todo: 'Feed dogs', done: true},
     {todo: 'Learn Express', done: false},
