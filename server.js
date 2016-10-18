@@ -47,7 +47,7 @@ app.get('/todos', function(req, res) {
     {todo: 'Learn Express', done: false},
     {todo: 'Have fun', done: true}
   ];
-  res.render('todos/index', {
+  res.render('/todos/index', {
     todos: todos
   });
 });
@@ -58,7 +58,7 @@ app.post('/todos', function(req, res){
     done: false
   });
   console.log(req.body.newTodo);
-  res.render('todos/index');
+  res.render('/todos/index');
 });
 
 // Tell the app to listen on port 3000
